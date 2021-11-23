@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+}
+.game-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.title {
+  display: flex;
+  justify-content: center;
+  color: rgb(224, 93, 16);
+  text-shadow: 2px 2px hsl(117, 100%, 54%);
+  letter-spacing: 2rem;
+  margin-bottom: 1rem;
+  animation-name: text-animate;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes text-animate {
+  0% {
+    transform: rotateX(0deg);
+    transform: rotateY(0deg);
+  }
+  50%{
+    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+  }
+  100%{
+    transform: rotateX(360deg);
+    transform: rotateY(360deg);
+  }
+}
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.score {
+  color: hsl(117, 100%, 54%);
+  margin-bottom: 0.5rem;
+}
+.game-grid {
+  width: 200px;
+  height: 400px;
+  background-color: yellow;
+  display: flex;
+  flex-wrap: wrap;
+  border: white 5px s0lid;
+}
+.game-grid div {
+  width: 20px;
+  height: 20px;
+  border: black 1px solid;
+}
+.tetromino {
+  background-color: blue;
+  border: solid 2px rgba(235, 224, 224, 0.5);
+  z-index: 2;
+}
+.game-inner-wrapper {
+  display: flex;
+}
+.mini-grid {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: yellow;
+  margin-left: 30px;
+}
+
+.mini-grid div {
+  height: 20px;
+  width: 20px;
+  border: solid black 1px;
+}
+
+.btn {
+  padding-bottom: 0.2rem;
+  margin-right: 2rem;
+  display: inline-block;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: hsl(117, 100%, 54%);
+  background-color: black;
+  border: hsl(117, 100%, 54%) 0.125rem solid;
+  width: 6rem;
+  height: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 0.1em hsl(0, 0%, 100% / 0.5);
+  box-shadow: 0 0.1em hsl(117, 100%, 54%);
+}
+.btn:hover {
+  color: white;
+  border: yellow;
+}
+.high-score {
+  color: hsl(117, 100%, 54%);
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+}
+.start-text{
+  color: white;
+  margin-top: 0.5rem;
+  margin-left: 0.70rem;
+  font-size: .85rem;
+}
